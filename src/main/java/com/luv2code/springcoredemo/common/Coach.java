@@ -1,4 +1,4 @@
-package com.luv2code.springcoredemo;
+package com.luv2code.springcoredemo.common;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
