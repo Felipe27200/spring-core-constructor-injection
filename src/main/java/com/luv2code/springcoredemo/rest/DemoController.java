@@ -2,7 +2,6 @@ package com.luv2code.springcoredemo.rest;
 
 import com.luv2code.springcoredemo.common.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,13 +19,7 @@ public class DemoController
      * will be injected automatically when we run the project.
      * */
     @Autowired // -> This annotation tells spring to inject a dependency
-
-    /*
-    * Must use @Qualifier to indicate which bean(dependency)
-    * Spring has to use
-    * */
-    // public DemoController(@Qualifier("baseballCoach") Coach myCoach)
-    public DemoController(@Qualifier("trackCoach") Coach myCoach)
+    public DemoController(Coach myCoach)
     {
         this.myCoach = myCoach;
     }
